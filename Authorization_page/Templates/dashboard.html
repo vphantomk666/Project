@@ -1,0 +1,23 @@
+{% extends "app.html" %}
+
+{% block content %}
+<div class="jumbotron text-center">
+<div class="container mt-5">
+  <h2>WELCOME TO THE DASHBOARD</h2>
+</div>
+</div>
+<div class="container mt-5">
+  {% if user %}
+    <h4>User Information</h4>
+    <ul>
+        <li>NAME: {{ user[1] }}</li> <!-- Accessing by field name -->
+        <li>Email: {{ user[2] }}</li> <!-- Accessing by field name -->
+    </ul>
+    <a href='/logout' class="btn btn-outline-danger">Logout</a>
+  {% else %}
+    <p>You are not logged in.</p>
+  {% endif %}
+  
+</div>
+
+{% endblock %}
