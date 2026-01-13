@@ -12,11 +12,6 @@ def favicon():
                                'favicon.png', mimetype='image/png')
 
 
-from flask import Flask, render_template, jsonify
-import urllib.request
-import json
-import geocoder
-
 app = Flask(__name__)
 
 
@@ -54,3 +49,4 @@ def get_iss_position():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
